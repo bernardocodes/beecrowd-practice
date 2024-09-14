@@ -17,30 +17,29 @@ void printaVet(int vet[],int tam){//imprime vet
 }
 
 int ordenaVet(){
-	
+
 }
 
-void separaParImpar(int *vet,int tam){
+void separaParImpar(int *vet,int tam){//PARES A ESQUERDA
 	int aux;
 	int p1 = 0;
-	for(int i=0;i<tam;i++){//percorrer o vetor
-		if(parOuImpar(vet[i])==0){//se for par, coloca na primeira parte do vetor
+	for(int i=0;i<tam;i++){
+		if(parOuImpar(vet[i])==0){
 			aux = vet[p1];
 			vet[p1] = vet[i];
 			vet[i] = aux;
 			p1++;
-		}
-			
+		}	
 	}
 }
 
 int main(){
 
 	/*
-	int A = 0;
-	scanf("%d",&A);
-	parOuImpar(A);
-	*/
+	   int A = 0;
+	   scanf("%d",&A);
+	   parOuImpar(A);
+	   */
 
 	int tam = 10;
 	int vet[] = {0,1,2,3,4,5,6,7,8,9};//tem que ficar 0,2,4,6,8,1,3,5,7,9
